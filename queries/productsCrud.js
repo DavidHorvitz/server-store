@@ -1,4 +1,4 @@
-const { Product } = require('../models/prodact');
+const { Product } = require('../models/product');
 
 class ProductsDatabase {
     constructor() {
@@ -23,9 +23,9 @@ class ProductsDatabase {
                 });
         })
     };
-    // editCity = (obj) => {
+    // editProduct = (obj) => {
     //     return new Promise((resolve, reject) => {
-    //         this.DeliverieCity.update(obj, {
+    //         this.Product.update(obj, {
     //             where: { id: obj.id },
     //             returning: true,
     //             plain: true
@@ -54,3 +54,5 @@ class ProductsDatabase {
 };
 
 module.exports = new ProductsDatabase();
+
+//יצירת פעולות ה CRUD

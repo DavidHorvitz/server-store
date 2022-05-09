@@ -1,17 +1,14 @@
-const mysql = require('mysql');
+// const mysql = require('mysql');
+
 const dotenv = require('dotenv');
 dotenv.config();
 
-//connection to MySql
-// const connection = mysql.createConnection({
-//     host: process.env.HOST,
-//     user: process.env.USER,
-//     password: process.env.PASSWORD,
-//     database: process.env.DATABASE
-// });
-const Sequelize = require('sequelize'); 
+const Sequelize = require('sequelize');
 
-const sequelize = new Sequelize('store' , process.env.USER , process.env.PASSWORD ,{
+const sequelize = new Sequelize(
+    'store',
+    process.env.USER,
+    process.env.PASSWORD,{
     dialect: 'mysql',
     host: process.env.HOST,
     logging: false,
@@ -20,6 +17,13 @@ const sequelize = new Sequelize('store' , process.env.USER , process.env.PASSWOR
 
 module.exports = sequelize;
 
+//connection to MySql
+// const connection = mysql.createConnection({
+//     host: process.env.HOST,
+//     user: process.env.USER,
+//     password: process.env.PASSWORD,
+//     database: process.env.DATABASE
+// });
 
 // module.exports = connection;
 
