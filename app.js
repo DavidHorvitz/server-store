@@ -7,7 +7,6 @@ const cors = require('cors');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var apiProductRouter = require('./routes/api/productApi');
-
 var app = express();
 const sequelize = require('./DB/DbConnection');
 
