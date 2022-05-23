@@ -23,20 +23,22 @@ class ProductsDatabase {
                 });
         })
     };
-    // editProduct = (obj) => {
-    //     return new Promise((resolve, reject) => {
-    //         this.Product.update(obj, {
-    //             where: { id: obj.id },
-    //             returning: true,
-    //             plain: true
-    //         }).then((result) => {
-    //             resolve(result._previousDataValues);
-    //         })
-    //             .catch(error => {
-    //                 reject(error);
-    //             });
-    //     })
-    // };
+    editProduct = (obj) => {
+        return new Promise((resolve, reject) => {
+            this.Product.update(obj, {
+                where: { id: obj.id },
+                returning: true,
+                plain: true
+            }).then((result) => {
+                console.log('******************');
+                console.log(result);
+                resolve(result);
+            })
+                .catch(error => {
+                    reject(error);
+                });
+        })
+    };
     // deleteCity = (obj) => {
     //     return new Promise((resolve, reject) => {
     //         this.DeliverieCity.destroy({
