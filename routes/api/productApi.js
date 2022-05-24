@@ -28,6 +28,14 @@ router.post('/edit-product', function (req, res, next) {
       res.status(500).send(err);
     });
 });
+router.post('./delete-product', function (req, res, next) {
+  ProductsDatabase.deleteProduct(req.body.data)
+    .then(result => {
+      res.send(result);
+    }).catch(err => {
+      res.status(500).send(err);
+    });
+});
 
 
 module.exports = router;

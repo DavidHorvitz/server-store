@@ -39,20 +39,20 @@ class ProductsDatabase {
                 });
         })
     };
-    // deleteCity = (obj) => {
-    //     return new Promise((resolve, reject) => {
-    //         this.DeliverieCity.destroy({
-    //             where: { id: obj.id },
-    //         }).then(() => {
-    //             resolve();
-    //         })
-    //             .catch(error => {
-    //                 console.log('error');
-    //                 console.log(error);
-    //                 reject(error);
-    //             });
-    //     })
-    // };
+    deleteProduct = (obj) => {
+        return new Promise((resolve, reject) => {
+            this.Product.destroy({
+                where: { id: obj.id },
+            }).then(() => {
+                resolve();
+            })
+                .catch(error => {
+                    console.log('error');
+                    console.log(error);
+                    reject(error);
+                });
+        })
+    };
 };
 
 module.exports = new ProductsDatabase();
