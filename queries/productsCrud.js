@@ -39,10 +39,10 @@ class ProductsDatabase {
                 });
         })
     };
-    deleteProduct = (obj) => {
+    deleteProduct = productId => {
         return new Promise((resolve, reject) => {
             this.Product.destroy({
-                where: { id: obj.id },
+                where: { id: productId },
             }).then(() => {
                 resolve();
             })
